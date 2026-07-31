@@ -8,4 +8,4 @@ Website là **Portfolio cá nhân** được thiết kế hiện đại, respons
 ## c. Link xem bản thiết kế Figma và live demo
 * 🎨 [Dán link Figma của bạn vào đây — nhớ bật chế độ Viewer]
 - **https://www.figma.com/design/7gxnG71e8LWuL2Taojjuab/L%C3%AA-Vi%E1%BB%87t-%C4%90%E1%BB%A9c---2400004465?node-id=6-21&t=ixNs783xgc3DDqF9-1**
-- 
+- **https://exquisite-zuccutto-cb0d06.netlify.app/**
