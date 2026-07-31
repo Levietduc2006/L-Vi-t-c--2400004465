@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: #0284c7;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.main-layout {
+    display: flex;
+    justify-content: center;
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 0 15px;
+    gap: 20px;
+    width: 100%;
+    flex: 1;
+}
+
+.side-banner {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.side-img-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 90px;
+}
+
+.side-img-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.side-img-box p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0284c7;
+}
+
+main {
+    flex: 1;
+    max-width: 850px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.page {
+    display: none;
+}
+
+.page.active-page {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.school-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #e0f2fe;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border-left: 5px solid #0284c7;
+}
+
+.school-logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 4px;
+    border: 2px solid #0284c7;
+}
+
+.school-info h3 {
+    color: #0369a1;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.school-info p {
+    color: #475569;
+    font-size: 14px;
+    margin: 0;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f8fafc;
+    border-left: 4px solid #0284c7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+.profile-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0284c7;
+}
+
+.profile-details p {
+    margin-bottom: 6px;
+}
+
+h2 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+.card, .project-card {
+    background: #f8fafc;
+    border-left: 4px solid #0284c7;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.travel-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.travel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.travel-img-box img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.travel-card h3 {
+    color: #0284c7;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.travel-card p {
+    font-size: 13px;
+    color: #475569;
+    margin: 0;
+}
+
+.khung-so-thich {
+    background: #f8fafc;
+    border-left: 4px solid #0284c7;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+.khung-so-thich h3 {
+    color: #0369a1;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.luoi-anh-so-thich {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.muc-anh-so-thich {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.muc-anh-so-thich img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.muc-anh-so-thich p {
+    font-size: 12px;
+    color: #475569;
+    margin: 0;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.contact-info {
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .side-banner {
+        display: none;
+    }
+    .main-layout {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1e293b;
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active-menu {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .school-header, .profile-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
